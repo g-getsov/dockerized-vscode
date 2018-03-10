@@ -6,7 +6,7 @@ To use the container go to the project directory and execute the following comma
 
 The "sudo -E" is necessary when running the container only when your user doesnt have permissions to run docker
 This allows the user to share his environment vars with the container instead of using the sudo env vars.
-This allows the container to forward the X11 connenction to the container so the GUI can be displayed.
+This allows the host to forward the X11 connenction to the container so the GUI can be displayed.
 
 This is not ment to be a plug and play container as it has been specifically configured for my setup but the files are
 well comented so you can just get rid of all the bloat that I've introduced for my current setup.
