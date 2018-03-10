@@ -1,0 +1,1 @@
+If your user doesnt have permissions to run docker run the bash script using "sudo -E bash run_vscode.sh" to preserve the local environment variables. If your user does have permissions just run the bash script normally. 
