@@ -1,1 +1,15 @@
-If your user doesnt have permissions to run docker run the bash script using "sudo -E bash run_vscode.sh" to preserve the local environment variables. If your user does have permissions just run the bash script normally. 
+To use the container go to the project directory and execute the following commands:
+
+1. $ sh buildcontainer.sh - builds the docker image
+2. $ sudo -E bash run_vscode.sh - runs the container
+3. (inside the container) $ code
+
+The "sudo -E" is necessary when running the container only when your user doesnt have permissions to run docker
+This allows the user to share his environment vars with the container instead of using the sudo env vars.
+This allows the container to forward the X11 connenction to the container so the GUI can be displayed.
+
+This is not ment to be a plug and play container as it has been specifically configured for my setup but the files are
+well comented so you can just get rid of all the bloat that I've introduced for my current setup.
+
+TODO:
+1. Find a way to successfully use docker-compose for this instead of plain docker.
